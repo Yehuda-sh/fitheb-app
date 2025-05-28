@@ -13,7 +13,8 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import type { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import type { RootStackParamList } from "../types/navigation";
+import type { RootStackParamList } from "../navigation/RootStackParamList";
+
 import { auth } from "../services/firebase";
 import { firestore } from "../services/firestore";
 import { Button } from "@rneui/themed";
@@ -165,8 +166,10 @@ const styles = StyleSheet.create({
   },
   selectedRole: {
     backgroundColor: "#2675d7",
+    color: "#fff",
   },
   roleText: {
+    
     color: "#000",
     fontWeight: "bold",
   },

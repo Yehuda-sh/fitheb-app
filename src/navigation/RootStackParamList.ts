@@ -17,6 +17,7 @@ export type RootStackParamList = {
   Exercises: undefined;    // ← הוסף שורה זו!
   TraineeList: undefined;
   Settings: undefined; 
-  
+  EditExercise: { exerciseId: string };
+  ExerciseDetails: { exerciseId: string };
 
 };

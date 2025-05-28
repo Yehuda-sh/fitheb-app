@@ -10,18 +10,18 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import { Avatar, Button, Input, Text, useTheme } from '@rneui/themed';
-import { useNavigation } from '@react-navigation/native';
+// import { useNavigation } from '@react-navigation/native'; // מיותר!
 import { auth } from '../services/firebase';
 import { firestore } from '../services/firestore';
 import { doc, getDoc, updateDoc, collection, query, where, getDocs, deleteDoc } from 'firebase/firestore';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import type { RootStackParamList } from '../types/navigation';
+import type { RootStackParamList } from '../navigation/RootStackParamList'; // ← עדכון נתיב
 
 type Props = NativeStackScreenProps<RootStackParamList, 'TrainerProfile'>;
 
 export default function TrainerProfileScreen({ navigation }: Props) {
   const { theme } = useTheme();
-  const nav = useNavigation();
+  // const nav = useNavigation(); // מיותר!
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [trainerId, setTrainerId] = useState<string | null>(null);

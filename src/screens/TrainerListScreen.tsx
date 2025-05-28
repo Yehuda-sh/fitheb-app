@@ -4,7 +4,7 @@ import React from 'react';
 import { View, StyleSheet, FlatList, ActivityIndicator } from 'react-native';
 import { Card, Text, useTheme } from '@rneui/themed';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import type { RootStackParamList } from '../types/navigation';
+import type { RootStackParamList } from '../navigation/RootStackParamList';
 
 // מגדירים ממשק מאמן - אפשר להרחיב בעתיד
 interface Trainer {

@@ -2,7 +2,7 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { useTheme } from '@rneui/themed';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import type { RootStackParamList } from '../types/navigation';
+import type { RootStackParamList } from '../navigation/RootStackParamList';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'ExerciseDetails'>;
 

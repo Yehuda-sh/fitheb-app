@@ -4,7 +4,8 @@ import React from 'react';
 import { View, StyleSheet, ScrollView, ActivityIndicator } from 'react-native';
 import { Button, Card, Text, useTheme } from '@rneui/themed';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import type { RootStackParamList } from '../types/navigation';
+import type { RootStackParamList } from '../navigation/RootStackParamList';
+
 import { firestore } from '../services/firestore';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'AdminDashboard'>;

@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Alert } from 'react-native';
 import { Button, Input, Text, useTheme } from '@rneui/themed';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import type { RootStackParamList } from '../types/navigation';
+import type { RootStackParamList } from '../navigation/RootStackParamList';
+
 import { firestore } from '../services/firestore';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'EditExercise'>;
