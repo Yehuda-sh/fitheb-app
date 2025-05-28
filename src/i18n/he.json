@@ -1,0 +1,157 @@
+{
+    "appName": "FitHeb",
+    "loading": "טוען...",
+    "error": "שגיאה",
+    "success": "הצלחה",
+    "cancel": "ביטול",
+    "save": "שמירה",
+    "delete": "מחיקה",
+    "edit": "עריכה",
+    "back": "חזרה",
+  
+    "accessibility": {
+      "imageDescription": "תמונה של {{description}}",
+      "buttonDescription": "כפתור {{action}}",
+      "linkDescription": "קישור ל{{destination}}",
+      "loadingMessage": "הדף נטען, אנא המתן",
+      "errorMessage": "אירעה שגיאה, אנא נסה שוב",
+      "successMessage": "הפעולה הושלמה בהצלחה",
+      "menuLabel": "תפריט ראשי",
+      "searchLabel": "חיפוש",
+      "settingsLabel": "הגדרות",
+      "exerciseCard": "תרגיל {{name}}",
+      "exerciseCardHint": "לחץ לצפייה בפרטי התרגיל",
+      "exerciseImage": "תמונה של תרגיל {{name}}",
+      "filterOption": "סנן לפי {{option}}",
+      "sortOption": "מיין לפי {{option}}",
+      "toggleSortDirection": "החלף כיוון מיון"
+    },
+  
+    "screens": {
+      "home": {
+        "title": "בית",
+        "welcome": "ברוכים הבאים ל{{appName}}"
+      },
+      "profile": {
+        "title": "פרופיל",
+        "editProfile": "עריכת פרופיל"
+      },
+      "settings": {
+        "title": "הגדרות",
+        "language": "שפה",
+        "theme": "ערכת נושא",
+        "notifications": "התראות"
+      },
+      "exercises": {
+        "title": "תרגילים",
+        "addExercise": "הוסף תרגיל",
+        "noExercises": "לא נמצאו תרגילים"
+      },
+      "admin": {
+        "title": "מנהל",
+        "dashboard": "לוח בקרה",
+        "manageTrainers": "ניהול מאמנים",
+        "manageTrainees": "ניהול מתאמנים",
+        "manageExercises": "ניהול תרגילים",
+        "systemSettings": "הגדרות מערכת"
+      },
+      "trainer": {
+        "dashboard": "לוח מאמן",
+        "myTrainees": "המתאמנים שלי"
+      },
+      "trainee": {
+        "dashboard": "איזור מתאמן"
+      },
+      "login": {
+        "title": "התחברות",
+        "email": "אימייל",
+        "password": "סיסמה",
+        "login": "התחבר",
+        "register": "הרשמה",
+        "adminQuickLogin": "כניסה מהירה כאדמין",
+        "trainerQuickLogin": "כניסה מהירה כמאמן",
+        "traineeQuickLogin": "כניסה מהירה כמתאמן"
+      },
+      "register": {
+        "title": "הרשמה",
+        "alreadyHaveAccount": "כבר יש לך חשבון? התחבר כאן"
+      }
+    },
+  
+    "exercise": {
+      "categories": {
+        "strength": "כוח",
+        "cardio": "אירובי",
+        "flexibility": "גמישות",
+        "balance": "שיווי משקל",
+        "core": "ליבה",
+        "yoga": "יוגה",
+        "pilates": "פילאטיס",
+        "other": "אחר"
+      },
+      "difficulty": {
+        "beginner": "מתחיל",
+        "intermediate": "ביניים",
+        "advanced": "מתקדם"
+      },
+      "equipment": {
+        "none": "ללא ציוד",
+        "dumbbells": "משקולות יד",
+        "barbell": "מוט",
+        "kettlebell": "קטלבל",
+        "resistance": "גומיות התנגדות",
+        "machine": "מכשיר",
+        "bench": "ספסל",
+        "mat": "מזרן",
+        "other": "אחר"
+      },
+      "muscleGroups": {
+        "chest": "חזה",
+        "back": "גב",
+        "shoulders": "כתפיים",
+        "biceps": "דו-ראשי",
+        "triceps": "תלת-ראשי",
+        "forearms": "אמות",
+        "abs": "בטן",
+        "obliques": "שרירי בטן אלכסוניים",
+        "lower_back": "גב תחתון",
+        "glutes": "עכוז",
+        "quadriceps": "ארבע ראשי",
+        "hamstrings": "מיתרי הברך",
+        "calves": "שוקיים",
+        "full_body": "גוף מלא",
+        "other": "אחר"
+      },
+      "filters": {
+        "categories": "קטגוריות",
+        "difficulty": "רמת קושי",
+        "equipment": "ציוד",
+        "muscleGroups": "קבוצות שרירים"
+      },
+      "sort": {
+        "title": "מיון",
+        "name": "שם",
+        "duration": "משך",
+        "calories": "קלוריות",
+        "likes": "לייקים",
+        "views": "צפיות",
+        "date": "תאריך",
+        "asc": "עולה",
+        "desc": "יורד"
+      },
+      "duration": "{{minutes}} דקות",
+      "calories": "{{calories}} קלוריות"
+    },
+  
+    "messages": {
+      "fillAllFields": "נא למלא את כל השדות",
+      "addedSuccessfully": "התווסף בהצלחה",
+      "updatedSuccessfully": "עודכן בהצלחה",
+      "deletedSuccessfully": "נמחק בהצלחה",
+      "areYouSure": "האם אתה בטוח?",
+      "yes": "כן",
+      "no": "לא",
+      "errorOccured": "אירעה שגיאה, נסה שנית"
+    }
+  }
+  

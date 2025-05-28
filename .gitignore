@@ -1,0 +1,51 @@
+# dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+
+# Native
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+firebase-import/serviceAccountKey.json
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.log
+
+# macOS
+.DS_Store
+*.pem
+
+# IDE
+.vscode/
+.idea/
+
+# local env files
+.env*
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+# testing
+/coverage
+
+# OS
+Thumbs.db
+
+# temp files
+*.tmp
+*.swp

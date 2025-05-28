@@ -1,0 +1,24 @@
+[
+    {
+      "name": "Push Up",
+      "description": "תרגיל לחיזוק החזה, כתפיים ויד קדמית.",
+      "type": "strength",
+      "difficulty": "beginner",
+      "youtube": "https://www.youtube.com/embed/_l3ySVKYVJ8?start=0&end=5&loop=1&playlist=_l3ySVKYVJ8"
+    },
+    {
+      "name": "Squat",
+      "description": "תרגיל לרגליים וישבן.",
+      "type": "strength",
+      "difficulty": "beginner",
+      "youtube": "https://www.youtube.com/embed/aclHkVaku9U?start=0&end=5&loop=1&playlist=aclHkVaku9U"
+    },
+    {
+      "name": "Plank",
+      "description": "תרגיל ליבה סטטי.",
+      "type": "core",
+      "difficulty": "intermediate",
+      "youtube": "https://www.youtube.com/embed/pSHjTRCQxIw?start=0&end=5&loop=1&playlist=pSHjTRCQxIw"
+    }
+  ]
+  
