@@ -14,8 +14,7 @@ import {
 import { Button } from "@rneui/themed";
 import { useTheme } from '@rneui/themed';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import type { RootStackParamList } from '../navigation/RootStackParamList'; // נתיב יחסי לתיקיית AppNavigator.tsx
-
+import type { RootStackParamList } from '../navigation/RootStackParamList';
 
 import { auth } from "../services/firebase";
 import { firestore } from "../services/firestore";
@@ -32,6 +31,7 @@ const DEMO_USERS = {
 
 const getRandomUserByRole = (role: "trainer" | "trainee") => {
   const filtered = allUsers.filter(u => u.role === role && u.email && u.password);
+  if (!filtered.length) return null;
   return filtered[Math.floor(Math.random() * filtered.length)];
 };
 
@@ -41,13 +41,12 @@ const LoginScreen: React.FC<Props> = ({ navigation, route }) => {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // role מתוך ה־route (אם הגיע מ־RoleSelect)
+  // role מתוך route (אם הגיע מ־RoleSelect)
   const role = route?.params?.role;
 
   useEffect(() => {
     if (!I18nManager.isRTL) I18nManager.forceRTL(true);
-    // אם הגיע role - אפשר (אם תרצה) למלא אוטומטית את שם המשתמש לדמו/הצגת טקסט, למשל
-    // if (role === "trainer" || role === "trainee") { ... }
+    // תוכל לשים כאן לוגיקה למלא אוטומטית אימייל של דמו לפי role אם תרצה
   }, [role]);
 
   const handleLogin = async (customEmail?: string, customPassword?: string) => {
@@ -70,9 +69,10 @@ const LoginScreen: React.FC<Props> = ({ navigation, route }) => {
 
       const roleFromDb = doc.data()?.role;
 
+      // התייחסות לשמות מסכים בדיוק כמו ב־AppNavigator!
       if (roleFromDb === "admin") navigation.replace("AdminDashboard");
       else if (roleFromDb === "trainer") navigation.replace("TrainerDashboard");
-      else if (roleFromDb === "trainee") navigation.replace("TraineeProfile"); // זהו המסך החדש!
+      else if (roleFromDb === "trainee") navigation.replace("TraineeProfile");
       else throw new Error("תפקיד לא מזוהה.");
     } catch (error: any) {
       alert(error.message || "שגיאה בהתחברות");
@@ -130,7 +130,7 @@ const LoginScreen: React.FC<Props> = ({ navigation, route }) => {
         titleStyle={{ color: "#fa7132", fontSize: 17 }}
       />
 
-      {/* כפתורי דמו מוקטנים בתחתית המסך */}
+      {/* כפתורי דמו בתחתית המסך */}
       <View style={styles.demoButtons}>
         <Button
           title="אדמין"
@@ -144,6 +144,7 @@ const LoginScreen: React.FC<Props> = ({ navigation, route }) => {
           onPress={() => {
             const trainer = getRandomUserByRole("trainer");
             if (trainer) handleLogin(trainer.email, trainer.password);
+            else alert("אין מאמני דמו ברשימה");
           }}
           buttonStyle={styles.demoButton}
         />
@@ -153,6 +154,7 @@ const LoginScreen: React.FC<Props> = ({ navigation, route }) => {
           onPress={() => {
             const trainee = getRandomUserByRole("trainee");
             if (trainee) handleLogin(trainee.email, trainee.password);
+            else alert("אין מתאמני דמו ברשימה");
           }}
           buttonStyle={styles.demoButton}
         />
