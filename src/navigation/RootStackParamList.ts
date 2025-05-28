@@ -13,11 +13,13 @@ export type RootStackParamList = {
   EditTrainer: { trainerId: string };
   AddTrainee: { trainerId: string };
   TraineeProfile: undefined;
-  Profile: undefined;      // ← הוסף שורה זו!
-  Exercises: undefined;    // ← הוסף שורה זו!
+  Profile: undefined; // ← הוסף שורה זו!
+  Exercises: undefined; // ← הוסף שורה זו!
   TraineeList: undefined;
-  Settings: undefined; 
+  Settings: undefined;
   EditExercise: { exerciseId: string };
   ExerciseDetails: { exerciseId: string };
-
+  TraineeDashboard: undefined;
+  WorkoutSelect: undefined;
+  Workout: { workoutIdx: number };
 };

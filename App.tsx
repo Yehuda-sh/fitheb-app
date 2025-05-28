@@ -1,31 +1,34 @@
 // App.tsx
-import 'intl-pluralrules';
-import './src/config/i18n';
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { ThemeProvider } from '@rneui/themed';
-import { theme } from './src/theme';
+import "intl-pluralrules";
+import "./src/config/i18n";
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { ThemeProvider } from "@rneui/themed";
+import { theme } from "./src/theme";
 
 // כאן תייבא את המסכים שלך
-import LoginScreen from './src/screens/LoginScreen';
-import RegisterScreen from './src/screens/RegisterScreen';
-import HomeScreen from './src/screens/HomeScreen';
-import ProfileScreen from './src/screens/ProfileScreen';
-import SettingsScreen from './src/screens/SettingsScreen';
-import ExercisesScreen from './src/screens/ExercisesScreen';
-import AddExerciseScreen from './src/screens/AddExerciseScreen';
-import ExerciseDetailsScreen from './src/screens/ExerciseDetailsScreen';
-import EditExerciseScreen from './src/screens/EditExerciseScreen';
-import TrainerDashboardScreen from './src/screens/TrainerDashboardScreen';
-import TrainerProfileScreen from './src/screens/TrainerProfileScreen';
-import TrainerListScreen from './src/screens/TrainerListScreen';
-import AddTraineeScreen from './src/screens/AddTraineeScreen';
-import EditTrainerScreen from './src/screens/EditTrainerScreen';
-import AdminDashboardScreen from './src/screens/AdminDashboardScreen';
-import RoleSelectScreen from './src/screens/RoleSelectScreen';
-
-import type { RootStackParamList } from './src/types/navigation';
+import LoginScreen from "./src/screens/LoginScreen";
+import RegisterScreen from "./src/screens/RegisterScreen";
+import HomeScreen from "./src/screens/HomeScreen";
+import ProfileScreen from "./src/screens/ProfileScreen";
+import SettingsScreen from "./src/screens/SettingsScreen";
+import ExercisesScreen from "./src/screens/ExercisesScreen";
+import AddExerciseScreen from "./src/screens/AddExerciseScreen";
+import ExerciseDetailsScreen from "./src/screens/ExerciseDetailsScreen";
+import EditExerciseScreen from "./src/screens/EditExerciseScreen";
+import TrainerDashboardScreen from "./src/screens/TrainerDashboardScreen";
+import TrainerProfileScreen from "./src/screens/TrainerProfileScreen";
+import TrainerListScreen from "./src/screens/TrainerListScreen";
+import AddTraineeScreen from "./src/screens/AddTraineeScreen";
+import EditTrainerScreen from "./src/screens/EditTrainerScreen";
+import AdminDashboardScreen from "./src/screens/AdminDashboardScreen";
+import RoleSelectScreen from "./src/screens/RoleSelectScreen";
+import TraineeProfileScreen from "./src/screens/TraineeProfileScreen";
+import TraineeListScreen from "./src/screens/TraineeListScreen";
+import TraineeDashboardScreen from "./src/screens/TraineeDashboardScreen";
+import { RootStackParamList } from "@/navigation/RootStackParamList";
+import WorkoutScreen from "./src/screens/WorkoutScreen";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -38,18 +41,30 @@ export default function App() {
           screenOptions={{
             headerShown: true,
             headerStyle: {
-              backgroundColor: '#007AFF',
+              backgroundColor: "#007AFF",
             },
-            headerTintColor: '#fff',
+            headerTintColor: "#fff",
             headerTitleStyle: {
-              fontWeight: 'bold',
+              fontWeight: "bold",
             },
           }}
         >
           {/* Authentication Screens */}
-          <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
-          <Stack.Screen name="Register" component={RegisterScreen} options={{ headerShown: false }} />
-          <Stack.Screen name="RoleSelect" component={RoleSelectScreen} options={{ headerShown: false }} />
+          <Stack.Screen
+            name="Login"
+            component={LoginScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Register"
+            component={RegisterScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="RoleSelect"
+            component={RoleSelectScreen}
+            options={{ headerShown: false }}
+          />
 
           {/* Main Screens */}
           <Stack.Screen name="Home" component={HomeScreen} />
@@ -59,18 +74,41 @@ export default function App() {
 
           {/* Exercise Management */}
           <Stack.Screen name="AddExercise" component={AddExerciseScreen} />
-          <Stack.Screen name="ExerciseDetails" component={ExerciseDetailsScreen} />
+          <Stack.Screen
+            name="ExerciseDetails"
+            component={ExerciseDetailsScreen}
+          />
           <Stack.Screen name="EditExercise" component={EditExerciseScreen} />
 
           {/* Trainer Screens */}
-          <Stack.Screen name="TrainerDashboard" component={TrainerDashboardScreen} />
-          <Stack.Screen name="TrainerProfile" component={TrainerProfileScreen} />
+          <Stack.Screen
+            name="TrainerDashboard"
+            component={TrainerDashboardScreen}
+          />
+          <Stack.Screen
+            name="TrainerProfile"
+            component={TrainerProfileScreen}
+          />
           <Stack.Screen name="TrainerList" component={TrainerListScreen} />
           <Stack.Screen name="AddTrainee" component={AddTraineeScreen} />
           <Stack.Screen name="EditTrainer" component={EditTrainerScreen} />
+          <Stack.Screen
+            name="TraineeProfile"
+            component={TraineeProfileScreen}
+          />
+          <Stack.Screen
+            name="TraineeDashboard"
+            component={TraineeDashboardScreen}
+          />
+          <Stack.Screen name="Workout" component={WorkoutScreen} />
+
+          <Stack.Screen name="TraineeList" component={TraineeListScreen} />
 
           {/* Admin Screens */}
-          <Stack.Screen name="AdminDashboard" component={AdminDashboardScreen} />
+          <Stack.Screen
+            name="AdminDashboard"
+            component={AdminDashboardScreen}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </ThemeProvider>
